@@ -16,6 +16,9 @@ triangulars :: [Integer]
 triangulars = map aux [0..]
     where aux num = foldl (+) 0 [0..num]
 
+triangularsbest :: [Integer]
+triangularsbest = 0 : zipWith (+) triangularsbest [1..]
+
 factorials :: [Integer]
 factorials = map aux [0..]
     where aux num = foldl (*) 1 [1..num]
